@@ -93,8 +93,6 @@ export class HAButton extends BaseAction {
     sd.setImage(context, svgToBase64(svg));
 
     wssBroadcast({ event: "appear", args: uuid });
-
-    sd.showOk(context);
   }
 
   onAppear(e: AppearDisappearEvent) {

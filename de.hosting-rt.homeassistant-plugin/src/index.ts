@@ -31,8 +31,12 @@ app.get("/sd/info", (req: Request, res: Response) => {
 // Start websocket server
 export const wss = new WebSocketServer({ server });
 wss.on("connection", (ws: WebSocket) => {
-  //send immediately a feedback to the incoming connection
+  // send immediately a feedback to the incoming connection
   ws.send(JSON.stringify({ event: "connected", args: {} }));
+
+  Object.keys(sd.settingsManager).forEach((context) => {
+    sd.showOk(context);
+  });
 });
 server.listen(6153);
 
@@ -55,3 +59,11 @@ setInterval(() => {
     },
   });
 }, 10000);
+
+setInterval(() => {
+  if (wss.clients.size < 1) {
+    Object.keys(sd.settingsManager).forEach((context) => {
+      sd.showAlert(context);
+    });
+  }
+}, 3000);

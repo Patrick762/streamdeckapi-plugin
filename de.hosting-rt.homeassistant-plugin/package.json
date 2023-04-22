@@ -12,7 +12,8 @@
     "build:bin": "npx pkg package.json --compress GZip -o plugin/de.hosting-rt.homeassistant-plugin.exe",
     "stopDeck": "wmic Path win32_process Where \"Caption Like 'StreamDeck.exe'\" Call Terminate",
     "startDeck": "start \"\" \"C:\\Program Files\\Elgato\\StreamDeck\\StreamDeck.exe\"",
-    "dev": "npm run stopDeck && npm run build && npm run startDeck"
+    "copy": "robocopy ./plugin %appdata%/Elgato/StreamDeck/Plugins/%npm_package_name%.sdPlugin /E",
+    "dev": "npm run stopDeck && npm run build && npm run copy && npm run startDeck"
   },
   "dependencies": {
     "@stream-deck-for-node/sdk": "^1.0.14",
