@@ -1,0 +1,38 @@
+{
+  "private": true,
+  "name": "de.hosting-rt.homeassistant-plugin",
+  "version": "1.0.0",
+  "author": "Patrick762",
+  "main": "./dist/index.js",
+  "bin": "./dist/index.js",
+  "scripts": {
+    "start": "npx ts-node ./src/index.ts -debug de.hosting-rt.homeassistant-plugin",
+    "build": "npm run build:ts && npm run build:bin",
+    "build:ts": "npx tsc -outDir dist",
+    "build:bin": "npx pkg package.json --compress GZip -o plugin/de.hosting-rt.homeassistant-plugin.exe",
+    "stopDeck": "wmic Path win32_process Where \"Caption Like 'StreamDeck.exe'\" Call Terminate",
+    "startDeck": "start \"\" \"C:\\Program Files\\Elgato\\StreamDeck\\StreamDeck.exe\"",
+    "dev": "npm run stopDeck && npm run build && npm run startDeck"
+  },
+  "dependencies": {
+    "@stream-deck-for-node/sdk": "^1.0.14",
+    "body-parser": "^1.20.2",
+    "express": "^4.18.2",
+    "human-readable-ids": "1.0.4",
+    "node-ssdp": "^4.0.1",
+    "ws": "^8.13.0"
+  },
+  "pkg": {
+    "targets": [
+      "node16-windows-x64"
+    ]
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.17",
+    "@types/node": "^16.11.12",
+    "@types/node-ssdp": "^4.0.1",
+    "@types/ws": "^8.5.4",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.5.3"
+  }
+}

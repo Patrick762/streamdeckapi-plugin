@@ -1,0 +1,36 @@
+{
+  "UUID": "de.hosting-rt.homeassistant-plugin",
+  "Name": "HomeAssistant Plugin",
+  "Author": "Patrick762",
+  "Description": "Plugin for use with Home Assistant",
+  "Icon": "./icons/pluginIcon",
+  "Version": "1.0.0",
+  "SDKVersion": 2,
+  "Software": {
+    "MinimumVersion": "5.0"
+  },
+  "OS": [
+    {
+      "Platform": "windows",
+      "MinimumVersion": "10"
+    }
+  ],
+  "Category": "IoT",
+  "CategoryIcon": "icons/category",
+  "CodePathWin": "de.hosting-rt.homeassistant-plugin.exe",
+  "CodePathMac": "de.hosting-rt.homeassistant-plugin",
+  "PropertyInspectorPath": "pi/index.html",
+  "Actions": [
+    {
+      "Icon": "icons/actionIcon",
+      "Name": "HA Button",
+      "States": [
+        {
+          "Image": "icons/actionState"
+        }
+      ],
+      "Tooltip": "HA Button",
+      "UUID": "de.hosting-rt.homeassistant-plugin.ha-button"
+    }
+  ]
+}
