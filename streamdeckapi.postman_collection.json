@@ -1,0 +1,107 @@
+{
+	"info": {
+		"_postman_id": "8fa1ebe2-e012-43f8-8fe0-cdb06461bcde",
+		"name": "streamdeckapi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14687312"
+	},
+	"item": [
+		{
+			"name": "Get Info",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/sd/info",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"sd",
+						"info"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get icon",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/sd/icon/{{buttonId}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"sd",
+						"icon",
+						"{{buttonId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Set icon",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "<svg xmlns=\"http://www.w3.org/2000/svg\" height=\"144\" width=\"144\">\r\n    <rect width=\"144\" height=\"144\" fill=\"black\" />\r\n    <circle cx=\"32\" cy=\"72\" r=\"10\" fill=\"white\" />\r\n    <circle cx=\"72\" cy=\"72\" r=\"10\" fill=\"white\" />\r\n    <circle cx=\"112\" cy=\"72\" r=\"10\" fill=\"white\" />\r\n    <text x=\"10\" y=\"120\" font-size=\"28px\" fill=\"white\">Configure</text>\r\n</svg>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/sd/icon/{{buttonId}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"sd",
+						"icon",
+						"{{buttonId}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "host",
+			"value": "localhost:6153",
+			"type": "string"
+		},
+		{
+			"key": "buttonId",
+			"value": "kind-sloth-97",
+			"type": "string"
+		}
+	]
+}
