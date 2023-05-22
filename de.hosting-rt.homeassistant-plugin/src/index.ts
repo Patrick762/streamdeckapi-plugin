@@ -5,7 +5,7 @@ import express, { Express, Request, Response } from "express";
 import * as http from "http";
 import { WebSocket, WebSocketServer } from "ws";
 
-export const SD_SSDP = "urn:home-assistant.io:device:stream-deck";
+export const SD_SSDP = "urn:home-assistant-device:stream-deck";
 
 interface PluginSettings {}
 
