@@ -28,14 +28,8 @@ jobs:
     - run: npm run build
     - run: mv plugin de.hosting-rt.homeassistant-plugin.sdPlugin
   
-    - name: Archive Release
-      uses: thedoctor0/zip-release@0.7.1
-      with:
-        type: 'zip'
-        filename: 'release.zip'
-        directory: 'de.hosting-rt.homeassistant-plugin'
-        exclusions: 'dist/* src/* *.json *.gitignore node_modules/*'
-
+    - name: Zip Folder
+      run: zip -r plugin.zip . -x "dist/*" "src/*" "*.json" "node_modules/*" ".gitignore"
     
     - name: Upload binaries to release
       uses: svenstaro/upload-release-action@v2
