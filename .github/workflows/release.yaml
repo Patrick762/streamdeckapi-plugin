@@ -34,7 +34,7 @@ jobs:
         type: 'zip'
         filename: 'release.zip'
         directory: 'de.hosting-rt.homeassistant-plugin'
-        exclusions: 'dist/* src/* *.json .gitignore node_modules/*'
+        exclusions: 'dist/**/* src/**/* *.json .gitignore node_modules/**/*'
 
     
     - name: Upload binaries to release
