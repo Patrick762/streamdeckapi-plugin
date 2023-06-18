@@ -37,10 +37,12 @@ jobs:
         exclusions: 'dist/* src/* *.json .gitignore node_modules/*'
 
     
-    - uses: "marvinpinto/action-automatic-releases@latest"
+    - name: Upload binaries to release
+      uses: svenstaro/upload-release-action@v2
       with:
-        repo_token: "${{ secrets.GITHUB_TOKEN }}"
-        prerelease: false
-        files: |
-          release.zip
+        repo_token: ${{ secrets.GITHUB_TOKEN }}
+        file: de.hosting-rt.homeassistant-plugin/release.zip
+        asset_name: plugin.zip
+        tag: ${{ github.ref }}
+        overwrite: true
     
