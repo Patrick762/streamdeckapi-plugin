@@ -3,8 +3,9 @@
   "Name": "HomeAssistant Plugin",
   "Author": "Patrick762",
   "Description": "Plugin for use with Home Assistant",
-  "Icon": "./icons/category",
+  "Icon": "./icons/pluginIcon",
   "Version": "1.0.0",
+  "URL": "https://github.com/Patrick762/streamdeckapi-plugin",
   "SDKVersion": 2,
   "Software": {
     "MinimumVersion": "5.0"
@@ -22,11 +23,11 @@
   "PropertyInspectorPath": "pi/index.html",
   "Actions": [
     {
-      "Icon": "icons/category",
+      "Icon": "icons/actionIcon",
       "Name": "HA Button",
       "States": [
         {
-          "Image": "icons/category"
+          "Image": "icons/actionState"
         }
       ],
       "Tooltip": "HA Button",
