@@ -35,7 +35,7 @@ jobs:
       uses: svenstaro/upload-release-action@v2
       with:
         repo_token: ${{ secrets.GITHUB_TOKEN }}
-        file: de.hosting-rt.homeassistant-plugin/release.zip
+        file: de.hosting-rt.homeassistant-plugin/plugin.zip
         asset_name: plugin.zip
         tag: ${{ github.ref }}
         overwrite: true
