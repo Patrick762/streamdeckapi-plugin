@@ -29,7 +29,7 @@ jobs:
     - run: mv plugin de.hosting-rt.homeassistant-plugin.sdPlugin
   
     - name: Zip Folder
-      run: zip -r plugin.zip . -x "dist/*" "src/*" "*.json" "node_modules/*" ".gitignore"
+      run: zip -r plugin.zip . -x "dist/*" "src/*" "package*.json" "tsconfig.json" "node_modules/*" ".gitignore"
     
     - name: Upload binaries to release
       uses: svenstaro/upload-release-action@v2
