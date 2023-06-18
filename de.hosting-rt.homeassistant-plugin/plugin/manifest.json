@@ -3,7 +3,7 @@
   "Name": "HomeAssistant Plugin",
   "Author": "Patrick762",
   "Description": "Plugin for use with Home Assistant",
-  "Icon": "./icons/pluginIcon",
+  "Icon": "./icons/category",
   "Version": "1.0.0",
   "SDKVersion": 2,
   "Software": {
@@ -15,18 +15,18 @@
       "MinimumVersion": "10"
     }
   ],
-  "Category": "IoT",
+  "Category": "Home Assistant",
   "CategoryIcon": "icons/category",
   "CodePathWin": "de.hosting-rt.homeassistant-plugin.exe",
   "CodePathMac": "de.hosting-rt.homeassistant-plugin",
   "PropertyInspectorPath": "pi/index.html",
   "Actions": [
     {
-      "Icon": "icons/actionIcon",
+      "Icon": "icons/category",
       "Name": "HA Button",
       "States": [
         {
-          "Image": "icons/actionState"
+          "Image": "icons/category"
         }
       ],
       "Tooltip": "HA Button",
