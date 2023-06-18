@@ -34,9 +34,8 @@ jobs:
         type: 'zip'
         filename: 'release.zip'
         directory: 'de.hosting-rt.homeassistant-plugin'
-        exclusions: 'dist src *.json .gitignore node_modules'
-    
-    - run: tree
+        exclusions: 'dist/* src/* *.json .gitignore node_modules/*'
+
     
     - uses: "marvinpinto/action-automatic-releases@latest"
       with:
