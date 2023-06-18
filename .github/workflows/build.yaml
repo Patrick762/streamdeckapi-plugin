@@ -28,5 +28,6 @@ jobs:
       with:
         node-version: 16.x
         cache: 'npm'
+        cache-dependency-path: de.hosting-rt.homeassistant-plugin
     - run: npm ci
     - run: npm run build
